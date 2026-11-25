@@ -1,0 +1,391 @@
+/* =====================================
+   1. CARRUSEL PRINCIPAL
+===================================== */
+
+.carousel-item {
+    position: relative;
+    height: 550px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.carousel-hero {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+}
+
+.carousel-hero h1,
+.carousel-hero h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+.carousel-hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* Adaptación a móviles */
+
+@media (max-width: 768px) {
+
+    .carousel-item {
+        height: 400px;
+    }
+
+    .carousel-hero h1,
+    .carousel-hero h2 {
+        font-size: 30px;
+    }
+
+    .carousel-hero p {
+        font-size: 16px;
+    }
+
+}
+
+/* =====================================
+   2. CONTROLES DEL CARRUSEL
+===================================== */
+
+.icono-control {
+    font-size: 28px;
+    color: #222222;
+    line-height: 1;
+}
+
+.icono-play,
+.icono-pausa {
+    font-size: 18px;
+    color: #222222;
+    line-height: 1;
+}
+
+.carousel-control-play-pause .icono-play {
+    display: none;
+}
+
+.carousel-control-play-pause.paused .icono-play {
+    display: inline-block;
+}
+
+.carousel-control-play-pause.paused .icono-pausa {
+    display: none;
+}
+
+/* =====================================
+   CARTA DEL RESTAURANTE
+===================================== */
+
+/* Igualar la altura de las tarjetas */
+#carta .card {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Igualar el tamaño de las imágenes */
+#carta .card-img-top {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+/* Organizar el contenido de las tarjetas */
+#carta .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Alinear las líneas y los precios */
+#carta .card-body hr {
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Eliminar el margen inferior del precio */
+#carta .card-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* Efecto al pasar el ratón */
+#carta .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#carta .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* =====================================
+   SECCIÓN NOSOTROS
+===================================== */
+
+#nosotros {
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+}
+
+#nosotros h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+#nosotros p {
+    line-height: 1.7;
+}
+
+.imagen-nosotros {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Adaptación a móviles */
+
+@media (max-width: 768px) {
+
+    #nosotros h2 {
+        font-size: 32px;
+    }
+
+    .imagen-nosotros {
+        height: 300px;
+    }
+
+}
+
+
+/* =====================================
+   PREGUNTAS FRECUENTES
+===================================== */
+
+#preguntas {
+    padding: 70px 20px !important;
+}
+
+#preguntas h2 {
+    font-size: 36px;
+}
+
+#preguntas .accordion {
+    max-width: 900px;
+    margin: 30px auto 0;
+}
+
+#preguntas .accordion-header {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+#preguntas .accordion-body {
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 20px;
+}
+
+#preguntas .accordion-header::after {
+    content: "⌄";
+    margin-left: auto;
+}
+
+#preguntas details[open] .accordion-header::after {
+    content: "⌃";
+}
+
+/* =====================================
+   RESERVAS
+===================================== */
+
+#reservas {
+    padding: 70px 0;
+    background-color: white;
+}
+
+#reservas h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+#reservas .texto-coreano {
+    color: #e92345;
+}
+
+#formulario-reserva {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+#formulario-reserva .form-label {
+    font-weight: 500;
+}
+
+#formulario-reserva .form-control,
+#formulario-reserva .form-select {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#formulario-reserva button {
+    background-color: #e92345;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#formulario-reserva button:hover {
+    background-color: #c91b38;
+}
+
+@media (max-width: 576px) {
+    #formulario-reserva {
+        padding: 20px;
+    }
+}
+
+#formulario-reserva .form-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#formulario-reserva .form-select {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: white;
+}
+
+/* =====================================
+   MENSAJE DE RESERVA
+===================================== */
+
+#mensaje-reserva {
+    max-width: 850px;
+    margin: 25px auto 0;
+    padding: 25px;
+    background-color: #e8f5e9;
+    border: 1px solid #198754;
+    border-radius: 12px;
+    color: #198754;
+    text-align: center;
+}
+
+#mensaje-reserva h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* =====================================
+   CONTACTO
+===================================== */
+
+#contacto h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#contacto h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#contacto p {
+    line-height: 1.6;
+}
+
+#contacto .texto-coreano {
+    color: #ed1740;
+}
+
+.icono-contacto {
+    width: 75px;
+    height: 75px;
+    background-color: #ed1740;
+    color: white;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 20px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer-restaurante {
+    background-color: #171717;
+    color: #cccccc;
+    padding: 60px 0 20px;
+}
+
+.footer-marca {
+    color: #ed1740;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.footer-coreano {
+    color: #ed1740;
+    letter-spacing: 3px;
+}
+
+.footer-restaurante h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.footer-restaurante p {
+    line-height: 1.7;
+}
+
+.footer-restaurante li {
+    margin-bottom: 10px;
+}
+
+.footer-restaurante a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-restaurante a:hover {
+    color: #ed1740;
+}
+
+.footer-restaurante hr {
+    border-color: #666666;
+    margin: 30px 0 20px;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 0;
+}
